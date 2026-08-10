@@ -22,7 +22,8 @@ App Store と Google Play は、どちらも「**Web 上に公開された** 規
 node scripts/build-legal-site.mjs
 ```
 
-そのうえで、このリポジトリでコミットして push する。
+そのうえで、このリポジトリでコミットする（push は自動で行われる。
+`scripts/git-hooks/post-commit` 参照）。数分後に上の URL へ反映される。
 
 ## なぜ公開リポジトリなのか
 

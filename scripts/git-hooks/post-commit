@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# コミットのたびに GitHub の Private リポジトリへ自動で送る（2026-08-11 CEO 指示）
+#
+# なぜ必要か:
+#   この Mac が壊れる・盗まれると、2026年7月29日からの全履歴（アプリのコード、
+#   経営文書、CEO の思考メモ）がすべて失われる。「バックアップを取り忘れた」を
+#   人の記憶に頼らないため、コミットを引き金に自動化している。
+#
+# 仕組み:
+#   git config core.hooksPath scripts/git-hooks
+#   によってこのフォルダが git のフック置き場になっている。
+#   （.git/hooks/ 配下はリポジトリに残らないため、あえてここに置いている。
+#     新しい Mac に移行したときは、上の一行を一度実行すれば復活する）
+#
+# 失敗しても commit 自体は成功する。オフラインでも作業は止まらず、
+# 次にオンラインでコミットしたときにまとめて送られる。
+# 経緯は .git/auto-push.log に残る。
+
+ROOT=$(git rev-parse --show-toplevel)
+LOG="$ROOT/.git/auto-push.log"
+STAMP=$(date '+%Y-%m-%d %H:%M:%S')
+
+if git push -q origin HEAD 2>>"$LOG"; then
+  echo "$STAMP  送信OK  $(git log -1 --format=%h\ %s)" >>"$LOG"
+else
+  echo "$STAMP  送信できず（次のコミットで再送されます）" >>"$LOG"
+  # コミットは成功として扱う。ここで 0 以外を返しても git は無視するが、意図を明示しておく
+  exit 0
+fi
