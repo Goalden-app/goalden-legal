@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | Goalden</title>
+<meta name="description" content="プライバシーポリシー / Privacy Policy">
+<style>
+  :root {
+    --cream: #F6F4EE;
+    --card: #FFFFFF;
+    --ink: #191713;
+    --mute: #847D6F;
+    --line: #ECE8DE;
+    --gold-deep: #C9921E;
+    --gold-ink: #8A6A1C;
+    --gold-tint: #FBF3DF;
+    --gold-tint-line: #F0DFB2;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.85;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 72px; }
+  .brand {
+    display: flex; align-items: baseline; gap: 10px;
+    margin-bottom: 24px;
+  }
+  .brand a { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: .02em; }
+  .brand span { color: var(--mute); font-size: 13px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+  .tabs button {
+    font: inherit; font-size: 14px; font-weight: 600;
+    padding: 8px 18px; border-radius: 999px; cursor: pointer;
+    background: transparent; color: var(--mute);
+    border: 1px solid var(--line);
+  }
+  .tabs button[aria-selected="true"] {
+    background: var(--gold-tint); color: var(--gold-ink); border-color: var(--gold-tint-line);
+  }
+  article {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px 26px 34px;
+  }
+  h1 { font-size: 22px; line-height: 1.5; margin: 0 0 4px; letter-spacing: .01em; }
+  .updated { color: var(--mute); font-size: 13px; margin: 0 0 24px; }
+  h2 {
+    font-size: 16px; margin: 30px 0 8px; padding-top: 20px;
+    border-top: 1px solid var(--line); color: var(--gold-ink);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 16px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--gold-deep); }
+  .hidden { display: none; }
+  footer { margin-top: 28px; color: var(--mute); font-size: 13px; text-align: center; }
+  footer a { color: var(--mute); }
+  @media (max-width: 480px) {
+    .wrap { padding: 24px 14px 56px; }
+    article { padding: 22px 18px 28px; border-radius: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><a href="./">Goalden</a><span>夢を叶えた自分に、会いに行こう。</span></div>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tab-ja" aria-controls="doc-ja" aria-selected="true">日本語</button>
+    <button role="tab" id="tab-en" aria-controls="doc-en" aria-selected="false">English</button>
+  </div>
+
+  <article id="doc-ja" role="tabpanel" aria-labelledby="tab-ja">
+<h1>Goalden プライバシーポリシー（ベータ版）</h1>
+<p class="updated">最終改定日: 2026年8月11日</p>
+<p>Goalden（以下「本サービス」）は、あなたのジャーナルを「誰にも見られない聖域」にすることを設計の核としています。本ポリシーは、収集する情報とその取り扱いを説明します。</p>
+<h2>1. 収集する情報</h2>
+<ul>
+<li>アカウント情報: メールアドレス、ニックネーム（実名は収集しません）</li>
+<li>プロフィール（任意）: 年代（範囲のみ。生年月日は収集しません）、性別。いずれも回答しなくても本サービスをご利用いただけます</li>
+<li>あなたが入力する内容: 夢、目標、チェックイン、ジャーナル、日常のタスク（ToDo）、AIメンターとの会話</li>
+<li>利用状況: 起動・画面表示・機能の利用回数などのイベント（ジャーナル等の記述内容そのものは分析に送信しません）</li>
+<li>不具合の記録: アプリが停止したときのエラー情報、端末の機種、OS のバージョン（記述内容は送信しません）</li>
+</ul>
+<h2>2. 利用目的</h2>
+<p>サービスの提供、AI 応答の生成、品質の改善、不正防止、重要なお知らせのため。年代・性別をご回答いただいた場合は、あなたに合った提案を行うためにのみ使用します（広告配信には使用しません）。</p>
+<h2>3. 業務の委託先（データの共有先）</h2>
+<ul>
+<li>Supabase: データの保管と認証（東京リージョン）</li>
+<li>Anthropic: AI 応答の生成（商用 API は入力をモデル学習に使用しません）</li>
+<li>PostHog: 利用状況の分析（米国。記述内容は送信しません）</li>
+<li>Sentry: 不具合の記録と監視（米国。記述内容は送信しません）</li>
+<li>Google (Gmail): ログインコードのメール送信</li>
+</ul>
+<p>運営者があなたの個人データを第三者に販売することはありません。</p>
+<h2>4. データの保管と削除</h2>
+<p>データはアカウントが存在する間保管されます。アプリ内の「アカウントを削除」を実行すると、クラウド上のすべてのデータが直ちに完全削除されます（復元できません）。</p>
+<h2>5. あなたの権利</h2>
+<p>自分のデータの閲覧・訂正・削除は、いずれもアプリ内で行えます。データのエクスポート機能は今後提供予定です。</p>
+<h2>6. セキュリティ</h2>
+<p>通信はすべて暗号化されます。データベースは行レベルのアクセス制御により、本人以外（運営者を含む）がポリシー上あなたの記録を読めない設計です。任意で生体認証によるアプリロックも利用できます。</p>
+<h2>7. 年齢</h2>
+<p>本サービスは18歳未満の方を対象としていません。</p>
+<h2>8. ポリシーの変更</h2>
+<p>重要な変更はアプリ内でお知らせします。</p>
+<p>お問い合わせ: naoharu369@gmail.com（運営者: Naoharu Yoshikawa）</p>
+  </article>
+
+  <article id="doc-en" role="tabpanel" aria-labelledby="tab-en" class="hidden" lang="en">
+<h1>Goalden Privacy Policy (Beta)</h1>
+<p class="updated">Last updated: August 11, 2026</p>
+<p>Goalden (the &quot;Service&quot;) is designed around one principle: your journal is a sanctuary no one else can see. This policy explains what we collect and how it is handled.</p>
+<h2>1. Information We Collect</h2>
+<ul>
+<li>Account: email address, nickname (we do not collect your real name)</li>
+<li>Profile (optional): age range (a range only; we do not collect your date of birth) and gender. You can use the Service without answering either.</li>
+<li>Content you enter: dreams, goals, check-ins, journal entries, everyday tasks (to-dos), AI mentor conversations</li>
+<li>Usage: events such as app opens, screen views, and feature usage counts (the text of your journal or messages is never sent to analytics)</li>
+<li>Diagnostics: error reports when the app crashes, your device model, and OS version (no content text is sent)</li>
+</ul>
+<h2>2. How We Use It</h2>
+<p>To provide the Service, generate AI responses, improve quality, prevent abuse, and send important notices. If you provide your age range or gender, we use them solely to tailor suggestions to you — never for advertising.</p>
+<h2>3. Service Providers (Data Processors)</h2>
+<ul>
+<li>Supabase: data storage and authentication (Tokyo region)</li>
+<li>Anthropic: AI response generation (its commercial API does not use your inputs to train models)</li>
+<li>PostHog: usage analytics (US; no content text is sent)</li>
+<li>Sentry: crash reporting and monitoring (US; no content text is sent)</li>
+<li>Google (Gmail): delivery of login codes</li>
+</ul>
+<p>We do not sell your personal data.</p>
+<h2>4. Retention &amp; Deletion</h2>
+<p>Data is kept while your account exists. Using &quot;Delete account&quot; in the app immediately and permanently erases all of your data from the cloud (unrecoverable).</p>
+<h2>5. Your Rights</h2>
+<p>You can view, correct, and delete your data directly in the app. Data export is planned.</p>
+<h2>6. Security</h2>
+<p>All communication is encrypted. Row-level access controls ensure that no one but you — including the Operator — can read your records under database policy. An optional biometric app lock is available.</p>
+<h2>7. Age</h2>
+<p>The Service is not directed to anyone under 18.</p>
+<h2>8. Changes</h2>
+<p>Material changes will be announced in the app.</p>
+<p>Contact: naoharu369@gmail.com (Operator: Naoharu Yoshikawa)</p>
+  </article>
+
+  <footer>
+    <a href="./privacy.html">Privacy Policy</a> ・ <a href="./terms.html">Terms of Service</a>
+  </footer>
+</div>
+
+<script>
+  // 言語の切り替え。初回はブラウザの言語設定にあわせて英語を出す
+  var tabs = { ja: document.getElementById('tab-ja'), en: document.getElementById('tab-en') };
+  var docs = { ja: document.getElementById('doc-ja'), en: document.getElementById('doc-en') };
+  function show(lang) {
+    ['ja', 'en'].forEach(function (l) {
+      var on = l === lang;
+      tabs[l].setAttribute('aria-selected', String(on));
+      docs[l].classList.toggle('hidden', !on);
+    });
+    document.documentElement.lang = lang;
+  }
+  tabs.ja.addEventListener('click', function () { show('ja'); });
+  tabs.en.addEventListener('click', function () { show('en'); });
+  if (!(navigator.language || '').toLowerCase().startsWith('ja')) show('en');
+</script>
+</body>
+</html>
